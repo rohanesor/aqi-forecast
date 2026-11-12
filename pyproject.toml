@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "india-aqi-forecast"
+version = "0.1.0"
+description = "Leakage-aware CPCB daily AQI forecasting dashboard"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+  "unit: fast isolated tests",
+  "integration: ingestion-training-artifact integration tests",
+  "e2e: headless Streamlit end-to-end tests",
+]

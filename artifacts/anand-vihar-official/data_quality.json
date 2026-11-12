@@ -1,0 +1,15 @@
+{
+  "source": "cpcb_anand_vihar_4pm_2026.csv",
+  "provenance": "Official CPCB station-level AQI monthly Excel exports, Anand Vihar Delhi DPCC Site 301; 4 PM IST values; January-October 2026; partial-year station series, not Delhi city AQI",
+  "rows_read": 304,
+  "rows_valid": 291,
+  "duplicate_city_dates": 0,
+  "invalid_dates": 0,
+  "invalid_aqi": 13,
+  "missing_dates": 0,
+  "cities": [
+    "Delhi \u2014 Anand Vihar station"
+  ],
+  "min_date": "2026-01-01",
+  "max_date": "2026-10-31"
+}

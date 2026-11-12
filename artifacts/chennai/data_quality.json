@@ -1,0 +1,16 @@
+{
+  "source": "demo_cpcb_format_NOT_OFFICIAL.csv",
+  "provenance": "SYNTHETIC DEMO \u2014 NOT OFFICIAL CPCB DATA",
+  "rows_read": 5746,
+  "rows_valid": 5746,
+  "duplicate_city_dates": 0,
+  "invalid_dates": 0,
+  "invalid_aqi": 0,
+  "missing_dates": 0,
+  "cities": [
+    "Chennai",
+    "Delhi"
+  ],
+  "min_date": "2019-01-01",
+  "max_date": "2026-11-12"
+}

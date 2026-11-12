@@ -1,0 +1,30 @@
+{
+  "project_version": "0.1.0",
+  "city": "Delhi \u2014 Anand Vihar station",
+  "source_file": "data/official/cpcb_anand_vihar_4pm_2026.csv",
+  "provenance": "Official CPCB station-level AQI monthly Excel exports, Anand Vihar Delhi DPCC Site 301; 4 PM IST values; January-October 2026; partial-year station series, not Delhi city AQI",
+  "is_demo": false,
+  "latest_observation_date": "2026-10-31",
+  "latest_observed_aqi": 96.0,
+  "forecast_issue_time_definition": "After the latest CPCB daily AQI observation is available; no future AQI inputs.",
+  "selection_basis": "Lowest training-only nested walk-forward MAE, separately for each horizon.",
+  "champions": {
+    "1": "persistence",
+    "2": "persistence",
+    "3": "persistence"
+  },
+  "candidates": [
+    "persistence",
+    "linear_regression",
+    "random_forest",
+    "xgboost",
+    "lightgbm"
+  ],
+  "minimum_samples_required": 175,
+  "usable_samples": {
+    "1": 183,
+    "2": 179,
+    "3": 177
+  },
+  "experimental_short_history": true
+}

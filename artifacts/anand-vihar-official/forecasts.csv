@@ -1,0 +1,4 @@
+city,horizon,issue_date,forecast_date,predicted_aqi,model
+Delhi — Anand Vihar station,1,2026-10-31,2026-11-01,96.0,persistence
+Delhi — Anand Vihar station,2,2026-10-31,2026-11-02,96.0,persistence
+Delhi — Anand Vihar station,3,2026-10-31,2026-11-03,96.0,persistence

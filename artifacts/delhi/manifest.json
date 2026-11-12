@@ -1,0 +1,20 @@
+{
+  "project_version": "0.1.0",
+  "city": "Delhi",
+  "source_file": "data/demo_cpcb_format_NOT_OFFICIAL.csv",
+  "provenance": "SYNTHETIC DEMO \u2014 NOT OFFICIAL CPCB DATA",
+  "is_demo": true,
+  "latest_observation_date": "2026-11-12",
+  "latest_observed_aqi": 268.0,
+  "forecast_issue_time_definition": "After the latest CPCB daily AQI observation is available; no future AQI inputs.",
+  "selection_basis": "Lowest training-only nested walk-forward MAE, separately for each horizon.",
+  "champions": {
+    "1": "xgboost",
+    "2": "xgboost",
+    "3": "xgboost"
+  },
+  "candidates": [
+    "persistence",
+    "xgboost"
+  ]
+}

@@ -1,0 +1,13 @@
+feature,feature_value,shap_value
+aqi_latest,268.0,46.092148
+target_month,11.0,24.479734
+aqi_mean_3,265.06666666666666,10.20416
+aqi_mean_14,232.56428571428572,8.028188
+target_day_of_week,6.0,-3.281146
+aqi_mean_7,254.6714285714286,3.2033179
+target_season,3.0,2.368782
+aqi_lag_7,232.7,-0.8535511
+aqi_lag_3,256.2,0.72408205
+aqi_lag_1,266.6,-0.71188045
+aqi_lag_2,260.6,-0.26390845
+target_diwali,0.0,0.0

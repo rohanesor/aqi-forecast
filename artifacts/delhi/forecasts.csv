@@ -1,0 +1,4 @@
+city,horizon,issue_date,forecast_date,predicted_aqi,model
+Delhi,1,2026-11-12,2026-11-13,222.90530395507812,xgboost
+Delhi,2,2026-11-12,2026-11-14,213.6839141845703,xgboost
+Delhi,3,2026-11-12,2026-11-15,209.3433380126953,xgboost

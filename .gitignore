@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+web/node_modules/
+*.joblib
+web/dist/
+web/tsconfig.tsbuildinfo
+outputs/
+/tmp/
+*.egg-info/
+.pytest_cache/
+data/New folder/
+web/aqi_promo.mp4
+*.pptx
+web/aqi_promo.mp4
