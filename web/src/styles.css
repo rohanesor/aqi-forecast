@@ -134,7 +134,8 @@ main { position: relative; }
 .spinner { width: 36px; height: 36px; border: 3px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .recharts-legend-item-text { font-size: 12px; }
-.recharts-tooltip-wrapper { max-width: 90vw !important; overflow: hidden; }
+.recharts-wrapper { overflow: hidden !important; }
+.recharts-tooltip-wrapper { pointer-events: none; }
 
 @media (max-width: 960px) {
   .links { display: none; }
