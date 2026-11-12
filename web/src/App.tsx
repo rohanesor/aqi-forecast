@@ -7,6 +7,7 @@ import { CityBundle, Index, getJSON } from './data';
 
 const Smog = lazy(() => import('./components/Smog'));
 const IndiaMap = lazy(() => import('./components/IndiaMap'));
+const Simulator = lazy(() => import('./components/Simulator'));
 
 function hasWebGL() {
   try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch { return false; }
@@ -55,7 +56,7 @@ export default function App() {
       {!bundle.is_demo && bundle.experimental_short_history && <div className="demo-bar" role="note"><b>OFFICIAL CPCB — STATION · INSUFFICIENT HISTORY{bundle.is_stale ? ' · STALE DATA' : ''}</b>&nbsp;· Historical experimental run, not Delhi city-wide AQI. Only {Math.min(...Object.values(bundle.usable_samples))} usable samples are available; 450 are required for production.{bundle.is_stale ? ` Latest observation is ${bundle.data_age_days} days old.` : ''}</div>}
       <header className="top">
         <a className="brand" href="#top"><span className="logo" style={{ background: c.colour }} />India AQI Forecast</a>
-        <nav className="links">{[['forecast', 'Forecast'], ['trend', 'Trend'], ['map', 'Map'], ['why', 'Why'], ['model', 'Accuracy'], ['health', 'Health'], ['data', 'Data']].map(([id, t]) => <a key={id} href={`#${id}`}>{t}</a>)}</nav>
+        <nav className="links">{[['forecast', 'Forecast'], ['trend', 'Trend'], ['map', 'Map'], ['simulator', 'Try It'], ['why', 'Why'], ['model', 'Accuracy'], ['health', 'Health'], ['data', 'Data']].map(([id, t]) => <a key={id} href={`#${id}`}>{t}</a>)}</nav>
         <div className="pills" role="radiogroup" aria-label="City">
           {index.cities.map((ci) => (
             <button key={ci.slug} role="radio" aria-checked={ci.slug === slug} className={ci.slug === slug ? 'on' : ''} onClick={() => setSlug(ci.slug)}>
@@ -105,6 +106,7 @@ export default function App() {
           </Reveal>
           <MapList index={index} values={mapValues} slug={slug} setSlug={setSlug} compact />
         </Section>
+        <Suspense fallback={null}><Simulator slug={bundle.slug} reduced={reduced} /></Suspense>
         <Explain b={bundle} day={day} setDay={setDay} />
         <ModelReport b={bundle} />
         <HealthGuide current={f.aqi} />
